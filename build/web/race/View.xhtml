@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:m="http://code.google.com/p/gmaps4jsf/"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Race n°#{raceController.selected.id}"></h:outputText>
+        </ui:define>
+        <ui:define name="header">
+            <meta property="og:description"   content="#{raceController.selected.user.firstName} run the #{raceController.selected.creationDate} ." />
+            <h:outputScript library="js" name="fb.js" />
+        </ui:define>
+        <ui:define name="body">
+            <!-- Load Facebook SDK for JavaScript -->
+            <div id="fb-root"></div>
+            <h:form>
+                <h3> Race from the
+                    <h:outputText value="#{raceController.selected.creationDate}" title="#{bundle.ViewRaceTitle_creationDate}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <div class="fb-share-button" 
+                         data-href="http://www.supfitness.com/" 
+                         data-layout="button_count" >
+                    </div>
+                </h3>
+                <div class="col-lg-12">
+                    <m:map height="500px" width="100%" autoReshape="true" >
+                        <c:forEach items="#{raceController.selected.tracks}" var="track" >
+                            <m:marker longitude="#{track.longitude}"  latitude="#{track.latitude}"  />
+                            <m:htmlInformationWindow latitude="#{track.latitude}" longitude="#{track.longitude}" 
+                                                     htmlText="A #{track.dateToString()} | vitesse : #{track.speed} km/h | id: #{track.id}"/> 
+                        </c:forEach>
+                        <m:polyline hexaColor="#18bc9c" lineWidth="2">
+                            <c:forEach items="#{raceController.selected.tracks}" var="track" >
+                                <m:point longitude="#{track.longitude}" latitude="#{track.latitude}"  />
+                            </c:forEach>
+                        </m:polyline>
+                    </m:map>
+                </div>
+                <p>
+                    <h:link outcome="/race/List" value="#{bundle.ViewRaceShowAllLink}"/>
+                </p>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+
+</html>

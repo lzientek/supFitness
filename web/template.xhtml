@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title><ui:insert name="title">Supfitness</ui:insert></title>
+        <meta property="og:url"           content="http://www.supfitness.com/" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="Supfitness" />
+        <ui:insert name="header"></ui:insert>
+        <link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.css" />
+        <h:outputStylesheet library="css" name="mycss.css"/>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    </h:head>
+
+    <h:body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">SupFitness</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        <c:if test="#{accountController.isConnected()}">
+                            <li>
+                                <a href="/race/List.xhtml">My races</a>
+                            </li>
+                        </c:if>
+                        <li>
+                            <a href="/webservicesHelper.xhtml">Web Services</a>
+                        </li>
+                    </ul>
+                    <h:form>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <c:choose>
+                                <c:when test="#{accountController.isConnected()}">
+                                    <li>
+                                        <h:commandLink action="#{accountController.logout()}" value='Logout'></h:commandLink>
+                                    </li>
+                                    <li>
+                                        <a href="/account/Edit.xhtml">My profile</a>
+                                    </li>
+                                </c:when>
+                                <c:otherwise>
+                                    <li>
+                                        <a href="#{accountController.prepareView()}">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/Create.xhtml">Register</a>
+                                    </li>
+                                </c:otherwise>
+                            </c:choose>
+
+                        </ul>
+                    </h:form>
+
+                </div>
+            </div>    
+        </div>
+
+        <div class="container">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><ui:insert name="title">Supfitness</ui:insert></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <h:form>
+                    <h:panelGroup class="alert alert-dismissible alert-info" rendered="#{not empty facesContext.messageList}" id="messagePanel" layout="block">
+                        <h:messages errorStyle="color: white" infoStyle="color: white" layout="list"/>
+                    </h:panelGroup>
+                </h:form>
+            </div>
+            <div class="row">
+
+                <ui:insert name="body">No result</ui:insert>
+            </div>
+
+            <footer>
+                <div class="row">
+                    <div class="col-lg-7">
+
+                        <p>Made by <a href="http://lucas.zientek.fr" rel="nofollow">ZIENTEK Lucas</a>. Contact him at <a href="mailto:152565@supinfo.com">152565@supinfo.com</a>.</p>
+                        <p>Project for <a href="http://supinfo.com" rel="nofollow">Supinfo</a>. 4JVA Project Number 2 - JSF / EJB.</p>
+
+                    </div>
+                    <div class="col-lg-5">
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />SupFitness de ZIENTEK Lucas est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>.
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+    </h:body>
+
+</html>

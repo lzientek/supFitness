@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/helper/JsfUtil.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/web/controllers/ControllerHelper.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/entity/Track.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/resources/js/fb.js</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/dao/AccountDao.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/race/List.xhtml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/WEB-INF/web.xml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/entity/Race.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/helper/SessionHelper.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/Bundle.properties</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/service/RaceService.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/template.xhtml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/account/Login.xhtml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/WEB-INF/glassfish-resources.xml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/web/controllers/util/JsfUtil.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/resources/css/mycss.css</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/dao/jpa/JpaRacesDao.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/account/Create.xhtml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/web/controllers/RaceController.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/WEB-INF/faces-config.xml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/dao/AbstractManager.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/helper/StatisticModel.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/web/controllers/AccountController.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/service/AccountService.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/race/View.xhtml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/account/Edit.xhtml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/webservices/TrackREST.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/web/controllers/HomeController.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/dao/RacesDao.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/webservicesHelper.xhtml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/entity/Account.java</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/web/index.xhtml</file>
+            <file>file:/D:/supinfo-cours/4JVA%20-%20Java%20EE%20-%20Enterprise%20programming/projet/SupFitness/src/java/com/supfitness/dao/jpa/JpaTracksDao.java</file>
+        </group>
+    </open-files>
+</project-private>

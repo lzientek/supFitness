@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListRaceTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form>
+                <c:forEach items="#{raceController.items}" var="race">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h3>Race ##{race.id}</h3>
+                            <p><h:outputText value="#{race.creationDate}" >
+                                    <f:convertDateTime pattern="MM/dd/yyyy" />
+                                </h:outputText></p>
+                        </div>
+                        <div class="col-lg-3">
+                            <p>#{race.tracks.size()} tracks</p>
+                        </div>
+                        <div class="col-lg-5">
+                            <h:commandButton class="btn btn-primary" value="Details" action="#{raceController.prepareView(race.id)}" />
+                        </div>
+                    </div>
+                </c:forEach>
+
+                <div class="row">
+                    <div class="col-lg-12" style="text-align: center;margin-top: 25px;">
+                        <ul class="pagination">
+
+                            <li class="#{raceController.pager.isFirstPage? 'disabled':''}" >
+                                <h:commandLink action="#{raceController.previousPage()}" value="&laquo;" />
+                            </li>
+
+                            <c:forEach begin="0" end="#{raceController.pager.numberOfPage-1}" var="i">
+                                <li class="#{raceController.pager.actualPage == i ? 'active' :''}" >
+                                    <h:commandLink action="#{raceController.gotoPage(i)}" value="#{i+1}" />
+                                </li> 
+                            </c:forEach>
+
+                            <li class="#{raceController.pager.isLastPage? 'disabled':''}" >
+                                <h:commandLink action="#{raceController.nextPage()}" value="&raquo;" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

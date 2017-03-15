@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewAccountTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="well bs-component">
+                    <h:form class="form-horizontal"  >
+
+                        <fieldset>
+                            <legend>Login</legend>
+
+
+                            <div class="form-group">
+                                <label for="inputUserName" class="col-lg-2 control-label">Username</label>
+                                <div class="col-lg-10">
+                                    <h:inputText class="form-control" id="inputUserName"  value="#{accountController.selected.userName}" title="#{bundle.EditAccountTitle_userName}" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                <div class="col-lg-10">
+                                    <h:inputSecret class="form-control" id="inputPassword" value="#{accountController.selected.password}" title="#{bundle.EditAccountTitle_password}"  />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-10 col-lg-offset-2">
+                                    <h:commandButton class="btn btn-primary" action="#{accountController.login}" value="#{bundle.EditAccountTitle_Login}"/>
+
+                                    <h:link outcome="Create" value="#{bundle.CreateAccountSaveLink}"/>
+
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </h:form>
+                </div>
+            </div>
+
+        </ui:define>
+    </ui:composition>
+
+</html>

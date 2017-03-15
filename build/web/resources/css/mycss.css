@@ -1,0 +1,6 @@
+footer{
+    margin-top: 50px;border-top: 1px solid #2c3e50;padding-top: 20px;
+}
+.afcktable > .afckingrow:nth-of-type(2n+1){
+    background-color: #ececec;
+}
